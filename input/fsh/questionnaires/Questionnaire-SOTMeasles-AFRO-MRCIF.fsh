@@ -32,15 +32,15 @@ Usage: #definition
     * insert Quest(reportingInstitution, Reporting Institution, group, false)
     * item[=]
       * insert Quest(reportingFacility, Reporting Health Facility, string, false)
-      * insert Quest(locality, Reporting District, string, false)
+      * insert Quest(reportingDistrictHospital, Reporting District Hospital, string, false)
+      * insert Quest(localilty, Reporting District, string, false)
     * insert Quest(DateReportedNational, Date the form was received at national level, date, false)
 //Demographics
   * insert Quest(demographics, IDENTIFICATION:, group, false)
   * item[=]
     * insert Quest(name, Name of Patient, string, false)
     * insert Quest(DoB, Date of Birth, date, false)
-    * item[=].
-    * insert Quest(ageOnset, If date of birth is unknown\, age, integer, false)
+    * insert Quest(ageOnset, Age in month and year, integer, false)
     * insert Quest(sex, Sex, choice, false)
     * item[=].answerValueSet = Canonical(BiologicalSex)
 //START ADAPT HERE - Break address into separate fields, and update value set for localityType
